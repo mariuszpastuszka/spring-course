@@ -14,7 +14,7 @@ public class HolderTest {
 
         try {
             Field secretFromInside = holder.getClass().getDeclaredField("secret");
-            secretFromInside.setAccessible(true);
+//            secretFromInside.setAccessible(true);
             try {
                 String secret = (String) secretFromInside.get(holder);
                 System.out.println("So I know Your secret: " + secret);

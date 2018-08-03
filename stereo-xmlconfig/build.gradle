@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'pl.mpas'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+jar {
+    baseName = 'stereo-xmlconfig'
+    version = '0.0.1-SNAPSHOT'
+}
+
+
+dependencies {
+    compile "org.springframework:spring-context:${springVersion}"
+
+    testCompile "org.springframework:spring-test:${springVersion}"
+    testCompile "com.github.stefanbirkner:system-rules:${systemRulesVersion}"
+}

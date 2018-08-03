@@ -1,3 +1,8 @@
 rootProject.name = 'learning-spring'
 include 'stereo-autoconfig'
+include 'own-dependency-injection'
+include 'stereo-javaconfig'
+include 'stereo-xmlconfig'
+include 'stereo-mixedconfig'
+include 'my-module'
 
