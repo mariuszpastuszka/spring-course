@@ -8,6 +8,10 @@ public class Calculator {
         result = a + b;
     }
 
+    public int getResult() {
+        return result;
+    }
+
     public void printResult() {
         System.out.println("Result = " + result);
     }
