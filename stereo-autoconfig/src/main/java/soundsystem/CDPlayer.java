@@ -16,4 +16,10 @@ public class CDPlayer implements MediaPlayer {
         cd.play();
     }
 
+    public static void main(String[] args) {
+        CompactDisc disc = new SgtPeppers();
+
+        CDPlayer cdPlayer = new CDPlayer(disc);
+
+    }
 }
