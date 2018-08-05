@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
-    @Value("name")
+    @Value("${name:nie-ma}")
     private String name;
 
     @Value("${surname}")
