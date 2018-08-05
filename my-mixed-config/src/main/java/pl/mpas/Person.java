@@ -11,7 +11,11 @@ public class Person {
     @Value("${surname}")
     private String surname;
 
+    @Value("${my-city}")
+    private String myCity;
+
     public void introduceYourself() {
         System.out.println(String.format("I'm %s %s", name, surname));
+        System.out.println("I'm from " + myCity);
     }
 }

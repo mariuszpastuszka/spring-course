@@ -6,6 +6,6 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan
-@PropertySource("/strings.properties")
+@PropertySource({"/strings.properties", "/my-values.properties"})
 public class MyConfig {
 }
