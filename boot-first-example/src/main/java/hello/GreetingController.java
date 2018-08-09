@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class GreetingController {
 
@@ -34,4 +37,28 @@ public class GreetingController {
         return "result";
     }
 
+    @GetMapping("/persons")
+    public String getPersons(Model model) {
+        model.addAttribute("persons", createPersons());
+
+        return "peoples";
+    }
+
+    @GetMapping("/welcome")
+    public String welcomePage() {
+        return "welcome";
+    }
+
+    List<Person> createPersons() {
+        List<Person> result = new ArrayList();
+
+        result.add(new Person("Marek", "W."));
+        result.add(new Person("Mirek", "M"));
+        result.add(new Person("Olaf", "L"));
+        result.add(new Person("Genowefa", "M"));
+        result.add(new Person("Chuck", "X"));
+        result.add(new Person("Kevin", "F"));
+
+        return result;
+    }
 }
