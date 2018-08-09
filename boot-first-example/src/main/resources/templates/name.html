@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moja pierwsza strona</title>
+</head>
+<body>
+    <p>Moja pierwsza strona</p>
+    <p th:text="'imie: ' + ${mariusz.name}" >Marek</p>
+    <p th:text="'nazwisko: ' + ${mariusz.surname}">Jurkowski</p>
+
+</body>
+</html>
