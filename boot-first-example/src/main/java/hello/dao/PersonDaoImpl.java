@@ -8,14 +8,18 @@ import java.util.List;
 
 @Component
 public class PersonDaoImpl implements PersonDao {
+    static private List<Person> personList;
+
+    static {
+        personList = createPersons();
+    }
 
     @Override
     public List<Person> readAllPersonsFromDatasource() {
-        return createPersons();
+        return personList;
     }
 
-
-    List<Person> createPersons() {
+    static List<Person> createPersons() {
         List<Person> result = new ArrayList();
 
         result.add(new Person("Marek", "W."));
