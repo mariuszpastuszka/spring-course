@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="neymar"
+          class="pl.mpas.player.Player">
+        <constructor-arg name="age" value="25"/>
+        <constructor-arg name="name" value="Neymar"/>
+        <constructor-arg name="playerValue" value="200000000"/>
+    </bean>
+
+    <bean id="messi"
+          class="pl.mpas.player.Player">
+        <constructor-arg name="name" value="Messi"/>
+        <constructor-arg name="age" value="32"/>
+        <constructor-arg name="playerValue" value="200000000"/>
+    </bean>
+
+    <bean id="kucharczyk"
+          class="pl.mpas.player.Player">
+        <property name="name" value="Michał"/>
+        <property name="age" value="31"/>
+        <property name="playerValue" value="0"/>
+    </bean>
+
+    <bean id="legia"
+          class="pl.mpas.player.Team">
+        <constructor-arg name="teamName" value="Legia"/>
+        <constructor-arg name="players">
+            <list>
+                <ref bean="messi"/>
+                <ref bean="neymar"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
