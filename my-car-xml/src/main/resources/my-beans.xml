@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="me"
+          class="pl.mpas.car.Owner">
+        <property name="name" value="Mariusz"/>
+        <property name="lastName" value="Pastuszek"/>
+    </bean>
+
+    <bean id="bmw"
+          class="pl.mpas.car.Car">
+        <constructor-arg name="model" value="7"/>
+        <constructor-arg name="owner" ref="me"/>
+    </bean>
+</beans>
