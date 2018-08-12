@@ -21,9 +21,10 @@
         <tr th:each="student: ${students}">
             <td th:text="${student.name}">Wieczny</td>
             <td th:text="${student.surname}">Student</td>
-            <td th:text="${student.surname}">Student</td>
-            <td th:text="${student.surname}">Student</td>
-            <a th:href="@{'/student/edit/' + ${student.id}}">view</a>
+            <td th:text="${student.grade}">Student</td>
+            <td th:text="${student.faculty}">Student</td>
+            <td> <a th:href="@{'/student/edit/' + ${student.id}}">Edit</a> </td>
+            <td><a th:href="@{'/student/delete/' + ${student.id}}">Edit</a> </td>
         </tr>
         </tbody>
     </table>
