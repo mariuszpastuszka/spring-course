@@ -28,11 +28,11 @@ public class StudentController {
         return "students";
     }
 
-    @GetMapping("students/edit/{id}")
+    @GetMapping("/students/edit/{id}")
     public String editStudent(@PathVariable("id") int studentId) {
 
         log.debug("Editing student of id {}", studentId);
 
-        return "";
+        return "students";
     }
 }

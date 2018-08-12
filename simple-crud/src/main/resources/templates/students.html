@@ -23,8 +23,8 @@
             <td th:text="${student.surname}">Student</td>
             <td th:text="${student.grade}">Student</td>
             <td th:text="${student.faculty}">Student</td>
-            <td> <a th:href="@{'/student/edit/' + ${student.id}}">Edit</a> </td>
-            <td><a th:href="@{'/student/delete/' + ${student.id}}">Edit</a> </td>
+            <td><a th:href="@{'/students/edit/' + ${student.id}}">Edit</a> </td>
+            <td><a th:href="@{'/students/delete/' + ${student.id}}">Delete</a> </td>
         </tr>
         </tbody>
     </table>
