@@ -1,0 +1,5 @@
+1). welcome - controller i reszta
+2). all page - || -
+3). add student
+4). edit student
+5). delete
