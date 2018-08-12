@@ -24,7 +24,7 @@
             <td th:text="${student.grade}">Student</td>
             <td th:text="${student.faculty}">Student</td>
             <td><a th:href="@{'/students/edit/' + ${student.id}}">Edit</a> </td>
-            <td><a th:href="@{'/students/delete/' + ${student.id}}">Delete</a> </td>
+            <td><a th:href="@{'/students/delete-choice/' + ${student.id}}">Delete</a> </td>
         </tr>
         </tbody>
     </table>

@@ -59,6 +59,13 @@ public class StudentController {
         return "add-student";
     }
 
+    @GetMapping("/students/delete-choice/{id}")
+    String deleteChoice(@PathVariable("id") long studentId, Model model) {
+        model.addAttribute("sId", studentId);
+
+        return "delete-choice";
+    }
+
     @GetMapping("/students/delete/{deleteId}")
     String deleteStudent(@PathVariable("deleteId") long studentId) {
 
