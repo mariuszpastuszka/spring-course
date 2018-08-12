@@ -51,4 +51,20 @@ public class StudentController {
 
         return "redirect:/all-students";
     }
+
+    @GetMapping("/students/add")
+    public String addStudent(Model model) {
+        model.addAttribute("newstudent", new Student());
+
+        return "add-student";
+    }
+
+    @GetMapping("/students/delete/{deleteId}")
+    String deleteStudent(@PathVariable("deleteId") long studentId) {
+
+        log.info("deleteStudent(), id: {}", studentId);
+        studentService.deleteStudent(studentId);
+
+        return "redirect:/all-students";
+    }
 }

@@ -40,4 +40,10 @@ public class StudentServiceImpl implements StudentService {
         studentDao.save(student);
     }
 
+    @Override
+    public void deleteStudent(long id) {
+        logger.info("deleteStudent(), id: {}", id);
+        studentDao.deleteById(id);
+    }
+
 }
