@@ -1,5 +1,5 @@
-1). welcome - controller i reszta
-2). all page - || -
-3). add student
-4). edit student
-5). delete
+1). welcome (/welcome) - controller i reszta
+2). all page (/students) - || -
+3). add student (/students/add)
+4). edit student (/students/edit)
+5). delete (/students/delete)
