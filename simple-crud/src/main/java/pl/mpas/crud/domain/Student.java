@@ -60,4 +60,24 @@ public class Student {
     public String getFaculty() {
         return faculty;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
 }

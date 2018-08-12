@@ -8,6 +8,7 @@ import pl.mpas.crud.dao.StudentDao;
 import pl.mpas.crud.domain.Student;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -23,7 +24,20 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> findAllStudents() {
-        logger.debug("findAllStudents()");
+        logger.info("findAllStudents()");
         return (List<Student>) studentDao.findAll();
     }
+
+    @Override
+    public Optional<Student> findStudentById(Long studentId) {
+        logger.info("findStudentById, id: {}", studentId);
+        return studentDao.findById(studentId);
+    }
+
+    @Override
+    public void saveStudent(Student student) {
+        logger.info("saveStudent(), student: {}", student);
+        studentDao.save(student);
+    }
+
 }

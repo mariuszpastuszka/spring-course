@@ -6,8 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import pl.mpas.crud.domain.Student;
 import pl.mpas.crud.service.StudentService;
+
+import java.util.Optional;
 
 @Controller
 public class StudentController {
@@ -21,7 +26,7 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping("/students")
+    @GetMapping("/all-students")
     public String getAllStudents(Model model) {
         model.addAttribute("students", studentService.findAllStudents());
 
@@ -29,10 +34,21 @@ public class StudentController {
     }
 
     @GetMapping("/students/edit/{id}")
-    public String editStudent(@PathVariable("id") int studentId) {
+    public String editStudent(@PathVariable("id") long studentId, Model model) {
 
-        log.debug("Editing student of id {}", studentId);
+        log.info("Editing student of id {}", studentId);
 
-        return "students";
+        Optional<Student> maybeStudent = studentService.findStudentById(studentId);
+        maybeStudent.ifPresent(student ->  model.addAttribute("student", student));
+
+        return "edit-student";
+    }
+
+    @PostMapping("/students/save")
+    public String saveStudent(@ModelAttribute Student student) {
+        log.info("saveStudent(), student: {}", student);
+        studentService.saveStudent(student);
+
+        return "redirect:/all-students";
     }
 }
