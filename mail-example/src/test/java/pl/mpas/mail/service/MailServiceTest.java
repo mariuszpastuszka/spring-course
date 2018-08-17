@@ -26,6 +26,6 @@ public class MailServiceTest {
 
     @Test
     public void trySendMail() {
-        Assert.assertTrue(mailService.sendEmailToUser("mpastuszka@gmail.com", "Hello", "How are you", "Testowy@gmail.com"));
+        Assert.assertTrue(mailService.sendEmailToUser("maniekdev@gmail.com", "Hello", "How are you", "Testowy@gmail.com"));
     }
 }
