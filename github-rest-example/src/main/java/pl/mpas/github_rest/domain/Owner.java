@@ -1,7 +1,7 @@
 package pl.mpas.github_rest.domain;
 
 public class Owner {
-    String avatar_url;
+    private String avatar_url;
 
     public Owner(String avatar_url) {
         this.avatar_url = avatar_url;
