@@ -48,6 +48,7 @@ public class MailApplication {
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.quitwait", "false");
+        mailSender.setJavaMailProperties(props);
 
         return mailSender;
     }
