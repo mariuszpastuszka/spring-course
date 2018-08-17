@@ -9,7 +9,11 @@ import pl.mpas.service.WeatherService;
 @Controller
 public class WeatherController {
 
-    WeatherService weatherService;
+    private WeatherService weatherService;
+
+    public WeatherController(WeatherService weatherService) {
+        this.weatherService = weatherService;
+    }
 
     @GetMapping("/display-weather")
     String diplayWeather(Model model) {

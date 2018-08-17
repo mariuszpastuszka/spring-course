@@ -1,5 +1,6 @@
 package pl.mpas;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
@@ -13,4 +14,8 @@ public class Application {
         return builder.build();
     }
 
+    public static void main(String[] args) {
+
+        SpringApplication.run(Application.class, args);
+    }
 }

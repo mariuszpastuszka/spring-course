@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather forecast</title>
+</head>
+<body>
+<h2>Weather forecast - London</h2>
+<table>
+    <thead>
+    <tr>
+        <th>City</th>
+        <th>Temperature</th>
+        <th>Pressure</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${weatherForecast.name}">Warszawa</td>
+        <td th:text="${weatherForecast.main.temp}">36</td>
+        <td th:text="${weatherForecast.main.pressure}">1000</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

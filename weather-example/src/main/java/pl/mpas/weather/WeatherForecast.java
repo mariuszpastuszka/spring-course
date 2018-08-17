@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherForecast {
-    private String name;
     private Forecast main;
+    private String name;
 
     public WeatherForecast() {
     }

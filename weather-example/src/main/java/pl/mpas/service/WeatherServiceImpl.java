@@ -1,13 +1,16 @@
 package pl.mpas.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pl.mpas.weather.WeatherForecast;
 
+import java.util.Arrays;
+
 @Service
 public class WeatherServiceImpl implements WeatherService {
-    private static final String url = "http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
+    private static final String url = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22";
     private RestTemplate restTemplate;
 
     @Autowired
