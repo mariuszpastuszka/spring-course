@@ -34,7 +34,7 @@ public class MailApplication {
     private String protocol;
 
     @Bean
-    public JavaMailSender gmailMailSender() {
+    public JavaMailSender javaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 
         mailSender.setHost(host);
