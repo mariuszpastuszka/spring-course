@@ -1,3 +1,4 @@
+https://api.github.com/repos/:mariuszpastuszka/:jdbc-course/commits
 0). pakiet domain - klasy domenowe, mapowanie json'a na klasy
 1). Application - startuje kontener Springa
 2). @Bean - RestTemplate
