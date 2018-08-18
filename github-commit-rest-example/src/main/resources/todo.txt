@@ -1,0 +1,9 @@
+0). pakiet domain - klasy domenowe, mapowanie json'a na klasy
+1). Application - startuje kontener Springa
+2). @Bean - RestTemplate
+3). Controller (restowy i webowy) - interfejs i implementacja
+    @RestController - zwraca obiekt konwertowany na json
+    @Controller - zwraca view - tu przekazujemy obiekt do wyświetlenia
+4). Serwis - @Service = @Component - interfejs + implementacja
+5). @Repository = @Component - interfejs i serwis - w środku siedzi RestTemplate (dao lub repository)
+    - korzysta z klas domenowych
