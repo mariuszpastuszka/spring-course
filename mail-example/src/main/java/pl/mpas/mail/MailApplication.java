@@ -45,22 +45,22 @@ public class MailApplication {
 
         mailSender.setUsername(login);
         mailSender.setPassword(password);
-
-        Properties props = mailSender.getJavaMailProperties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.quitwait", "false");
-        MailSSLSocketFactory sf = null;
-        try {
-            sf = new MailSSLSocketFactory();
-        } catch (GeneralSecurityException e) {
-            e.printStackTrace();
-        }
-        sf.setTrustAllHosts(true);
-        props.put("mail.imap.ssl.trust", "*");
-        props.put("mail.imap.ssl.socketFactory", sf);
-
-        mailSender.setJavaMailProperties(props);
+//
+//        Properties props = mailSender.getJavaMailProperties();
+//        props.put("mail.smtp.auth", "true");
+//        props.put("mail.smtp.starttls.enable", "true");
+//        props.put("mail.smtp.quitwait", "false");
+//        MailSSLSocketFactory sf = null;
+//        try {
+//            sf = new MailSSLSocketFactory();
+//        } catch (GeneralSecurityException e) {
+//            e.printStackTrace();
+//        }
+//        sf.setTrustAllHosts(true);
+//        props.put("mail.imap.ssl.trust", "*");
+//        props.put("mail.imap.ssl.socketFactory", sf);
+//
+//        mailSender.setJavaMailProperties(props);
 
         return mailSender;
     }
