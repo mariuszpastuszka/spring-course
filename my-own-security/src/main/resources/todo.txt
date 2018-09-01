@@ -1,3 +1,6 @@
 1). Controller - z dwoma actionami ("/home", "/root")
+    - Application
+    - MyController
+    - Service
 2). Dodanie obsługi security - użytkownik wbudowany
 3). Własny formularz do logowania
