@@ -2,5 +2,7 @@
     - Application
     - MyController
     - Service
+    - home - niechroniony - link do root'a
+    - root - chroniony
 2). Dodanie obsługi security - użytkownik wbudowany
 3). Własny formularz do logowania
