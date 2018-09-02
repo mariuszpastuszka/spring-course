@@ -7,10 +7,10 @@
 </head>
 <body>
     <p></p>
-    <form th:action="@{/}" method="post">
-        <div><label> User Name : <input type="text" name="username"/> </label></div>
-        <div><label> Password: <input type="password" name="password"/> </label></div>
-        <div><input type="submit" value="Sign In"/></div>
+    <p>Do you like apples?</p>
+    <form th:action="@{/decision}" method="post">
+        <input type="submit" name="decision" value="yes">&nbsp;
+        <input type="submit" name="decision" value="no"/>
     </form>
 
 </body>
