@@ -1,9 +1,12 @@
-- szkielet aplikacji
+x - szkielet aplikacji
     - spring
     - thymeleaf
     - security
     - crud
 - strona startowa
+    - login
+    - zarządzanie uczniami
+    - lista ocen dla dziecka
 - dodawanie/edycja/usuwanie uczniów
 - security - wyświetlanie ocen tylko dla konta
 - admin - wyświetlać wszystkie oceny

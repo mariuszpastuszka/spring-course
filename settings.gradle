@@ -5,4 +5,5 @@ include 'stereo-javaconfig'
 include 'stereo-xmlconfig'
 include 'stereo-mixedconfig'
 include 'my-module'
+include 'grade-book'
 
