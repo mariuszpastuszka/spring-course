@@ -1,0 +1,10 @@
+- szkielet aplikacji
+    - spring
+    - thymeleaf
+    - security
+    - crud
+- strona startowa
+- dodawanie/edycja/usuwanie uczniów
+- security - wyświetlanie ocen tylko dla konta
+- admin - wyświetlać wszystkie oceny
+- przedmioty predefiniowane
