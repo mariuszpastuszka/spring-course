@@ -32,9 +32,14 @@ public class Pupil {
     }
 
     public boolean enrollOnSubject(Subject subject) {
-        boolean result = false;
+        boolean shouldAdd = pupilGrades.stream()
+                .noneMatch(pupilGrade -> pupilGrade.getSubject().equals(subject));
 
-        return result;
+        if (shouldAdd) {
+            pupilGrades.add(new PupilGrade(subject));
+        }
+
+        return shouldAdd;
     }
 
     public Set<Subject> enrollOnSubjects(Set<Subject> subjects) {
