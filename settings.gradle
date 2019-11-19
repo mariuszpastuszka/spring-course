@@ -11,4 +11,8 @@ include 'scheduling-tasks'
 include 'simple-crud'
 include 'rest-consumer'
 include 'rest-full-example'
+include 'weather-example'
+include 'file-upload-example'
+include 'github-rest-example'
+include 'github-commit-rest-example'
 
