@@ -10,10 +10,10 @@ import pl.mpas.github_rest.domain.RepositoryInfo;
 public class GithubRestDaoImpl implements GithubRestDao {
 
     @Value("${github.user.name:mariuszpastuszka}")
-    private static String reposOwner;
-    private static final String GITHUB_REPOS_URL;
+    private String reposOwner;
+    private final String GITHUB_REPOS_URL;
 
-    static {
+    {
         GITHUB_REPOS_URL = String.format("https://api.github.com/users/%s/repos", reposOwner);
     }
 
