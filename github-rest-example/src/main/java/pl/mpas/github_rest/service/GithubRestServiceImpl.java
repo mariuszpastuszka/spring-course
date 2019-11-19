@@ -3,10 +3,7 @@ package pl.mpas.github_rest.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.mpas.github_rest.dao.GithubRestDao;
-import pl.mpas.github_rest.domain.InfosOfRepos;
 import pl.mpas.github_rest.domain.RepositoryInfo;
-
-import java.util.List;
 
 @Service
 public class GithubRestServiceImpl implements GithubRestService {
@@ -19,7 +16,7 @@ public class GithubRestServiceImpl implements GithubRestService {
     }
 
     @Override
-    public InfosOfRepos getInfoOfMyRepos() {
+    public RepositoryInfo[] getInfoOfMyRepos() {
         return githubRestDao.getMyRepos();
     }
 }

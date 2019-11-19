@@ -1,9 +1,7 @@
 package pl.mpas.github_rest.service;
 
-import pl.mpas.github_rest.domain.InfosOfRepos;
-
-import java.util.List;
+import pl.mpas.github_rest.domain.RepositoryInfo;
 
 public interface GithubRestService {
-    InfosOfRepos getInfoOfMyRepos();
+    RepositoryInfo[] getInfoOfMyRepos();
 }

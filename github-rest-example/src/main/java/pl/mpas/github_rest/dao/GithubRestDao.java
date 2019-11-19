@@ -1,8 +1,8 @@
 package pl.mpas.github_rest.dao;
 
-import pl.mpas.github_rest.domain.InfosOfRepos;
+import pl.mpas.github_rest.domain.RepositoryInfo;
 
 public interface GithubRestDao {
 
-    InfosOfRepos getMyRepos();
+    RepositoryInfo[] getMyRepos();
 }

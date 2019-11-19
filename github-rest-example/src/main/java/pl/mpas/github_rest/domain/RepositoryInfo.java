@@ -1,9 +1,15 @@
 package pl.mpas.github_rest.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RepositoryInfo {
     String full_name;
     Owner owner;
     String url;
+
+    public RepositoryInfo() {
+    }
 
     public RepositoryInfo(String full_name, Owner owner, String url) {
         this.full_name = full_name;

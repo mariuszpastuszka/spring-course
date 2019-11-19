@@ -15,4 +15,5 @@ include 'weather-example'
 include 'file-upload-example'
 include 'github-rest-example'
 include 'github-commit-rest-example'
+include 'data-access-example'
 
