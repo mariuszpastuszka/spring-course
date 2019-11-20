@@ -30,6 +30,9 @@ public class Application implements CommandLineRunner {
 
         log.info("Creating tables");
 
+        // 1). Stwórz własną tabelke Book
+        // 2. Dodać parę (3) do tabelki
+        // pobrać i zmapować na obiekt za pomocą lambdy
         jdbcTemplate.execute("DROP TABLE customers IF EXISTS");
         jdbcTemplate.execute("CREATE TABLE customers(" +
                 "id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255))");

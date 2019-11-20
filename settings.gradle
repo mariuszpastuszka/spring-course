@@ -16,4 +16,6 @@ include 'file-upload-example'
 include 'github-rest-example'
 include 'github-commit-rest-example'
 include 'data-access-example'
+include 'simple-security'
+include 'my-mixed-config'
 
